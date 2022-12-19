@@ -8,5 +8,5 @@
 <div class="container">
 <input type="text" class="form-control" [(ngModel)] = 'username'> 
 <p>{{username}}</p>
-<button [disabled]="!username" (click)="username = ' ' "> Click Here! </button>
+<button class="btn btn-primary" [disabled]="username === ' ' " (click)="username = ' ' "> Click Here! </button>
 </div>
