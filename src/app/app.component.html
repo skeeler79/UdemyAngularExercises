@@ -8,6 +8,12 @@
         <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
+
+      <button class="btn btn-primary" (click)="showParagraph()">Display Details</button>
+
+      <p *ngIf = 'addParagraph'>This is my paragraph with random content. I am getting hungry for lunch!</p>
+
+      <p *ngFor="let num of clickArray" [ngStyle]="{background: changeColor()}" [ngClass]="{'white-text': num >=5}">{{num}}</p>
     </div>
   </div>
 </div>
